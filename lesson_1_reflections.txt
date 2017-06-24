@@ -1,0 +1,33 @@
+# 课程1:操纵提交历史 6.思考：使用diff找bug
+# 查看文件的两个版本之间的差异如何帮助你了解引入的错误？
+# 使用diff 找bug
+# 许多开发者都将行限制为不超过 80 到 120 个字符。
+
+# 如何创建目录和文件
+cd ~                          # 更改目录 directory
+mkdir version-control         # 创建 version-control 目录
+cd version-control            # 转到 version-control 目录
+mkdir reflections             # 创建 reflections（思考）目录
+cd reflections                # 转到 reflections（思考）目录
+subl lesson_1_reflections.txt # 启动 Sublime Text，并打开名为 lesson_1_reflections.txt 的文件（如果你更喜欢使用其他编辑器，则可将 subl 替换为该编辑器的名称）
+
+7.版本来自哪里？ # saving manual copies／Dropbox/google docs/wiki
+从长远来看，能轻松访问文件的整个历史记录将如何提高编程者的效率？
+
+14.为每项逻辑更改进行一次提交：你改正了不同函数中的两个小错误，然后同时提交两者。此提交可能过大。在改正第一个错误后提交将会更好，因为这两个错误的改正互不相关。
+只需记住：每个提交都应具有一个清晰的逻辑目的，而且绝不应在不进行提交的情况下完成过多工作。
+
+15.手动提交：你认为，手动选择何时创建提交（像在 Git 中做的那样）与自动保存版本（如 Google Docs 所做的那样）各有何优缺点？手段选择提交可减少多版本所带来的检索难度，自动保存可以减少人为发生的忘记保存或者混淆的事件
+18.多文件提交：为何你认为一些版本控制系统（例如 Git）允许在一次提交中保存多个文件，而其他系统（例如 Google Docs）单独对待每个文件？
+
+21.获得彩色输出：git config --global color.ui auto
+克隆版本：git clone（后跟空格和版本库 URL）
+运行 git log 会列出最近的提交及其相关信息（包括提交 ID）
+22.如何使用命令 git log 和 git diff 来查看文件的历史记录？
+26.对新版本控制的信心：使用版本控制，如何让你更有信心进行有可能会造成破坏的更改？
+
+
+配置git，更改路径：alias subl="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
